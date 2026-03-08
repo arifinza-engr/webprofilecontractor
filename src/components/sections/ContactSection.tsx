@@ -135,7 +135,7 @@ export default function ContactSection() {
 
           {/* Form */}
           <motion.div
-            className="lg:col-span-3 bg-white rounded-sm p-8 shadow-sm"
+            className="lg:col-span-3 bg-white rounded-sm p-5 sm:p-8 shadow-sm"
             variants={slideRight}
             initial="hidden"
             animate={inView ? "show" : "hidden"}

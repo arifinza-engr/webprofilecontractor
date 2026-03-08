@@ -22,6 +22,13 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
   }, [mobileOpen]);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    const target = document.querySelector(href);
+    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <>
       <header
@@ -36,7 +43,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-serif text-xl font-bold tracking-tight text-ink hover:opacity-80 transition-opacity"
+            className={cn(
+              "font-serif text-xl font-bold tracking-tight hover:opacity-80 transition-opacity",
+              scrolled ? "text-ink" : "text-cream"
+            )}
           >
             GABEL<span className="text-gold"> Gemilang</span>
           </Link>
@@ -47,6 +57,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={cn(
                     "font-sans text-xs font-medium tracking-widest uppercase transition-colors duration-200",
                     scrolled
@@ -63,6 +74,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <Link
             href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="hidden lg:inline-flex btn-primary text-xs py-2.5 px-5"
           >
             Konsultasi Gratis
@@ -71,7 +83,7 @@ export default function Navbar() {
           {/* Mobile burger */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="lg:hidden p-2 text-ink"
+            className={cn("lg:hidden p-2 transition-colors", scrolled ? "text-ink" : "text-cream")}
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -106,7 +118,7 @@ export default function Navbar() {
                   <li key={item.href}>
                     <Link
                       href={item.href}
-                      onClick={() => setMobileOpen(false)}
+                      onClick={(e) => handleNavClick(e, item.href)}
                       className="font-sans text-sm font-medium tracking-widest uppercase text-stone hover:text-ink transition-colors"
                     >
                       {item.label}
@@ -116,7 +128,7 @@ export default function Navbar() {
               </ul>
               <Link
                 href="#contact"
-                onClick={() => setMobileOpen(false)}
+                onClick={(e) => handleNavClick(e, "#contact")}
                 className="btn-primary mt-auto text-xs justify-center"
               >
                 Konsultasi Gratis

@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
         />
 
         {/* Carousel */}
-        <div className="relative min-h-[280px] flex items-center">
+        <div className="relative min-h-[320px] sm:min-h-[280px] flex items-center">
           <AnimatePresence mode="wait" custom={dir}>
             <motion.div
               key={idx}
@@ -69,7 +69,7 @@ export default function TestimonialsSection() {
               </div>
 
               {/* Quote */}
-              <blockquote className="font-serif text-xl md:text-2xl italic text-cream/85 leading-relaxed mb-8 max-w-2xl">
+              <blockquote className="font-serif text-base sm:text-xl md:text-2xl italic text-cream/85 leading-relaxed mb-8 max-w-2xl">
                 &ldquo;{t.content}&rdquo;
               </blockquote>
 
@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
         <div className="flex items-center justify-center gap-4 mt-8">
           <button
             onClick={() => paginate(-1)}
-            className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center
+            className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center
                        text-cream/50 hover:text-cream hover:border-cream transition-all"
             aria-label="Previous"
           >
@@ -113,7 +113,7 @@ export default function TestimonialsSection() {
 
           <button
             onClick={() => paginate(1)}
-            className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center
+            className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center
                        text-cream/50 hover:text-cream hover:border-cream transition-all"
             aria-label="Next"
           >

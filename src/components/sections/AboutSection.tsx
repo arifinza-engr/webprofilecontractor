@@ -51,7 +51,7 @@ export default function AboutSection() {
             </div>
             {/* Floating badge */}
             <motion.div
-              className="absolute -right-6 -bottom-6 bg-ink text-cream p-6 rounded-sm shadow-2xl"
+              className="absolute right-0 -bottom-4 md:-right-6 md:-bottom-6 bg-ink text-cream p-6 rounded-sm shadow-2xl"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
@@ -66,7 +66,7 @@ export default function AboutSection() {
               </p>
             </motion.div>
             {/* Accent line */}
-            <div className="absolute -left-4 top-10 bottom-10 w-1 bg-gold" />
+            <div className="absolute left-0 md:-left-4 top-10 bottom-10 w-1 bg-gold" />
           </motion.div>
 
           {/* Text side */}

@@ -38,9 +38,9 @@ export default function HeroSection() {
           {/* Label */}
           <motion.span
             className="inline-block font-sans text-[0.65rem] font-semibold tracking-widest uppercase text-gold mb-5"
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            transition={{ delay: 0.05, duration: 0.35 }}
           >
             Kontraktor Profesional · Sejak {COMPANY.founded}
           </motion.span>
@@ -48,9 +48,9 @@ export default function HeroSection() {
           {/* Headline */}
           <motion.h1
             className="font-serif text-5xl sm:text-6xl md:text-7xl font-bold text-cream leading-[1.05] mb-6 text-balance"
-            initial={{ opacity: 0, y: 32 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ delay: 0.15, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
             {COMPANY.tagline}
           </motion.h1>
@@ -58,9 +58,9 @@ export default function HeroSection() {
           {/* Sub */}
           <motion.p
             className="font-sans text-base md:text-lg text-cream/70 leading-relaxed mb-10 max-w-lg"
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
+            transition={{ delay: 0.25, duration: 0.35 }}
           >
             Konstruksi, desain interior, dan jasa drafter berkualitas tinggi untuk hunian dan komersial Anda.
           </motion.p>
@@ -68,9 +68,9 @@ export default function HeroSection() {
           {/* CTAs */}
           <motion.div
             className="flex flex-wrap gap-4"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.65, duration: 0.5 }}
+            transition={{ delay: 0.35, duration: 0.3 }}
           >
             <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
               Konsultasi Gratis
@@ -87,7 +87,7 @@ export default function HeroSection() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
+        transition={{ delay: 0.55 }}
       >
         <span className="font-sans text-[0.6rem] tracking-widest uppercase">Scroll</span>
         <motion.div

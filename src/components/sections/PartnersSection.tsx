@@ -49,7 +49,7 @@ export default function PartnersSection() {
             <div className="grid md:grid-cols-2 gap-0">
 
               {/* Left — Identity */}
-              <div className="flex flex-col items-center justify-center gap-6 px-10 py-14 border-b md:border-b-0 md:border-r border-mist/20 bg-surface/40">
+              <div className="flex flex-col items-center justify-center gap-6 px-6 py-10 md:px-10 md:py-14 border-b md:border-b-0 md:border-r border-mist/20 bg-surface/40">
                 {/* Monogram badge */}
                 <div className="w-24 h-24 rounded-sm bg-ink flex items-center justify-center shadow-lg">
                   <span className="font-sans text-3xl font-bold text-cream tracking-tight">
@@ -85,7 +85,7 @@ export default function PartnersSection() {
               </div>
 
               {/* Right — Detail */}
-              <div className="flex flex-col justify-center gap-7 px-10 py-14">
+              <div className="flex flex-col justify-center gap-7 px-6 py-10 md:px-10 md:py-14">
                 <div>
                   <p className="font-sans text-[0.7rem] font-semibold tracking-widest uppercase text-gold mb-3">
                     Tentang Kemitraan
