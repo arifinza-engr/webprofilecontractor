@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-stone: var(--stone);
+  --color-mist: var(--mist);
+  --color-surface: var(--surface);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-roboto), system-ui, sans-serif;
+  --font-serif: var(--font-roboto), Georgia, serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --cream: #fafaf8;
+    --ink: #0d0d0d;
+    --stone: #5a5750;
+    --mist: #c8c5bc;
+    --surface: #f0efeb;
+    --gold: #b8a47a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--cream);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--ink);
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--cream);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .section-label {
+    @apply font-sans text-[0.65rem] font-semibold tracking-widest uppercase text-mist;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl font-bold leading-tight text-ink;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-ink text-cream font-sans text-sm font-medium
+           px-7 py-3.5 rounded-sm tracking-wide
+           transition-all duration-300 ease-out
+           hover:bg-stone active:scale-95;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border border-ink text-ink font-sans text-sm font-medium
+           px-7 py-3.5 rounded-sm tracking-wide
+           transition-all duration-300 ease-out
+           hover:bg-ink hover:text-cream active:scale-95;
+  }
+
+  .divider {
+    @apply w-12 h-px bg-gold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .clip-path-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
 }
