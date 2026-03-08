@@ -205,7 +205,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: "Owner",
     company: "Kafe Nusantara",
     content:
-      "Tim interior ARKON sangat kreatif. Mereka berhasil mentransformasi ruang kosong menjadi kafe yang instagrammable dan nyaman. Pelanggan kami terus bertambah!",
+      "Tim interior GABEL Gemilang sangat kreatif. Mereka berhasil mentransformasi ruang kosong menjadi kafe yang instagrammable dan nyaman. Pelanggan kami terus bertambah!",
     rating: 5,
     avatar:
       "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80",
@@ -226,7 +226,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Sari Dewi",
     role: "Pemilik Villa",
     content:
-      "Villa impian saya terwujud berkat ARKON. Dari desain hingga pembangunan, semua terkoordinasi dengan sangat baik. Saya sangat merekomendasikan mereka!",
+      "Villa impian saya terwujud berkat GABEL Gemilang. Dari desain hingga pembangunan, semua terkoordinasi dengan sangat baik. Saya sangat merekomendasikan mereka!",
     rating: 5,
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80",
@@ -272,12 +272,13 @@ export const TEAM: TeamMember[] = [
 // ─── Partners ─────────────────────────────────────────────────────────────────
 export const PARTNERS: Partner[] = [
   {
-    id:          "pr1",
-    name:        "TB Kunci",
-    logo:        "/images/partners/partner-1.svg",
-    website:     "https://tokobangunan-sejahtera.id",
-    tagline:     "Supplier Bahan Bangunan Terpercaya",
-    description: "Kemitraan strategis kami dengan TB Kunci memastikan setiap proyek mendapatkan material berkualitas tinggi, ketersediaan stok yang terjamin, dan harga kompetitif — sehingga hasil kerja selalu optimal.",
+    id: "pr1",
+    name: "TB Kunci",
+    logo: "/images/partners/partner-1.svg",
+    website: "https://tokobangunan-sejahtera.id",
+    tagline: "Supplier Bahan Bangunan Terpercaya",
+    description:
+      "Kemitraan strategis kami dengan TB Kunci memastikan setiap proyek mendapatkan material berkualitas tinggi, ketersediaan stok yang terjamin, dan harga kompetitif — sehingga hasil kerja selalu optimal.",
     benefits: [
       "Material bersertifikat & berstandar SNI",
       "Stok lengkap & pengiriman tepat waktu",
