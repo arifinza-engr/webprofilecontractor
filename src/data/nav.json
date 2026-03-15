@@ -1,0 +1,9 @@
+[
+  { "label": "Tentang", "href": "#about" },
+  { "label": "Layanan", "href": "#services" },
+  { "label": "Portofolio", "href": "#portfolio" },
+  { "label": "Reels", "href": "#reels" },
+  { "label": "Mitra", "href": "#partners" },
+  { "label": "Tim", "href": "#team" },
+  { "label": "Kontak", "href": "#contact" }
+]

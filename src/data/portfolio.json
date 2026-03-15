@@ -1,0 +1,81 @@
+[
+  {
+    "id": "p1",
+    "title": "Rumah Modern Minimalis",
+    "location": "Bandung",
+    "category": "konstruksi",
+    "year": 2024,
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=700&q=80",
+    "area": "220 m²"
+  },
+  {
+    "id": "p2",
+    "title": "Kantor Startup 3 Lantai",
+    "location": "Jakarta",
+    "category": "konstruksi",
+    "year": 2023,
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80",
+    "area": "540 m²"
+  },
+  {
+    "id": "p3",
+    "title": "Interior Apartemen Mewah",
+    "location": "Surabaya",
+    "category": "interior",
+    "year": 2024,
+    "image": "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=700&q=80",
+    "area": "95 m²"
+  },
+  {
+    "id": "p4",
+    "title": "Restoran Fine Dining",
+    "location": "Bandung",
+    "category": "interior",
+    "year": 2024,
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80",
+    "area": "180 m²"
+  },
+  {
+    "id": "p5",
+    "title": "Villa Tepi Danau",
+    "location": "Lembang",
+    "category": "konstruksi",
+    "year": 2023,
+    "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80",
+    "area": "310 m²"
+  },
+  {
+    "id": "p6",
+    "title": "Gambar Kerja Rumah 2 Lantai",
+    "location": "Cimahi",
+    "category": "drafter",
+    "year": 2024,
+    "image": "https://images.unsplash.com/photo-1574359411659-15573a27fd0c?w=700&q=80"
+  },
+  {
+    "id": "p7",
+    "title": "Showroom Otomotif",
+    "location": "Bekasi",
+    "category": "interior",
+    "year": 2023,
+    "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80",
+    "area": "400 m²"
+  },
+  {
+    "id": "p8",
+    "title": "Renovasi Ruko 4 Unit",
+    "location": "Soreang",
+    "category": "konstruksi",
+    "year": 2022,
+    "image": "https://images.unsplash.com/photo-1601303981778-0f61e3d2da64?q=80&w=1038&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "area": "480 m²"
+  },
+  {
+    "id": "p9",
+    "title": "RAB Kompleks Perumahan",
+    "location": "Padalarang",
+    "category": "drafter",
+    "year": 2023,
+    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]

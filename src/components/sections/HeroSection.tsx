@@ -75,7 +75,14 @@ export default function HeroSection() {
             <a href={waUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
               Konsultasi Gratis
             </a>
-            <Link href="#portfolio" className="btn-outline border-cream text-cream hover:bg-cream hover:text-ink">
+            <Link
+              href="#portfolio"
+              onClick={(e) => {
+                e.preventDefault();
+                document.querySelector("#portfolio")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="btn-outline border-cream text-cream hover:bg-cream hover:text-ink"
+            >
               Lihat Portofolio
             </Link>
           </motion.div>

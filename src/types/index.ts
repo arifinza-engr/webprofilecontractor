@@ -53,7 +53,7 @@ export interface Partner {
 export interface InstagramReel {
   id:        string;
   title:     string;
-  thumbnail: string;
+  thumbnail?: string;
   url:       string;
   views?:    string;
 }

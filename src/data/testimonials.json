@@ -1,0 +1,36 @@
+[
+  {
+    "id": "t1",
+    "name": "Budi Santoso",
+    "role": "Pemilik Rumah",
+    "content": "GABEL Gemilang benar-benar profesional. Rumah saya selesai sesuai jadwal dan hasilnya melebihi ekspektasi. Komunikasi mereka sangat baik dari awal hingga akhir proyek.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+  },
+  {
+    "id": "t2",
+    "name": "Indah Permata",
+    "role": "Owner",
+    "company": "Kafe Nusantara",
+    "content": "Tim interior GABEL Gemilang sangat kreatif. Mereka berhasil mentransformasi ruang kosong menjadi kafe yang instagrammable dan nyaman. Pelanggan kami terus bertambah!",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=761&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": "t3",
+    "name": "Dr. Hendra Wijaya",
+    "role": "Direktur",
+    "company": "PT. Maju Bersama",
+    "content": "Jasa drafter dan RAB mereka sangat detail dan akurat. Membantu kami menghemat biaya signifikan karena perencanaan yang matang sejak awal.",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+  },
+  {
+    "id": "t4",
+    "name": "Sari Dewi",
+    "role": "Pemilik Villa",
+    "content": "Villa impian saya terwujud berkat GABEL Gemilang. Dari desain hingga pembangunan, semua terkoordinasi dengan sangat baik. Saya sangat merekomendasikan mereka!",
+    "rating": 5,
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+  }
+]

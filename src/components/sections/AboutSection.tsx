@@ -42,7 +42,7 @@ export default function AboutSection() {
           >
             <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+                src="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f"
                 alt="Tim GABEL Gemilang di lapangan"
                 fill
                 className="object-cover"

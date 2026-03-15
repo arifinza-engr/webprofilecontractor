@@ -1,0 +1,30 @@
+[
+  {
+    "id": "m1",
+    "name": "Arif Kurniawan",
+    "role": "Founder & Principal Architect",
+    "bio": "15 tahun pengalaman di bidang arsitektur dan konstruksi. Lulusan ITB dengan spesialisasi sustainable design.",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
+  },
+  {
+    "id": "m2",
+    "name": "Konita Rahayu",
+    "role": "Head of Interior Design",
+    "bio": "Desainer interior berpengalaman dengan portofolio ratusan proyek residensial dan komersial di seluruh Indonesia.",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
+  },
+  {
+    "id": "m3",
+    "name": "Bima Prasetyo",
+    "role": "Senior Structural Engineer",
+    "bio": "Ahli struktur dengan sertifikasi internasional. Memastikan setiap bangunan aman, kuat, dan sesuai standar.",
+    "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
+  },
+  {
+    "id": "m4",
+    "name": "Putri Maharani",
+    "role": "Project Manager",
+    "bio": "Ahli manajemen proyek bersertifikat PMP dengan rekam jejak menyelesaikan proyek tepat waktu dan sesuai anggaran.",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+  }
+]

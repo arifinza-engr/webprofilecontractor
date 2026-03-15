@@ -1,0 +1,44 @@
+[
+  {
+    "id": "konstruksi",
+    "title": "Konstruksi",
+    "description": "Pembangunan struktur dari pondasi hingga finishing dengan standar kualitas tinggi, ketepatan jadwal, dan efisiensi anggaran.",
+    "icon": "building",
+    "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    "features": [
+      "Konstruksi Rumah Tinggal",
+      "Gedung Komersial & Perkantoran",
+      "Renovasi & Restorasi",
+      "Manajemen Proyek End-to-End",
+      "Pengawasan Lapangan"
+    ]
+  },
+  {
+    "id": "interior",
+    "title": "Desain Interior",
+    "description": "Transformasi ruang menjadi lingkungan yang fungsional, estetis, dan mencerminkan kepribadian penghuni.",
+    "icon": "sofa",
+    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+    "features": [
+      "Konsep & Perencanaan Ruang",
+      "Pemilihan Material & Furnitur",
+      "Custom Furniture & Joinery",
+      "Pencahayaan & Mekanikal",
+      "Eksekusi & Instalasi"
+    ]
+  },
+  {
+    "id": "drafter",
+    "title": "Drafter & RAB",
+    "description": "Penyusunan gambar kerja, denah, tampak, potongan, dan Rencana Anggaran Biaya (RAB) yang akurat dan terperinci.",
+    "icon": "pencil-ruler",
+    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "features": [
+      "Gambar Kerja 2D (AutoCAD)",
+      "Visualisasi 3D Rendering",
+      "RAB Detail & Spesifikasi",
+      "Gambar As-Built",
+      "Revisi Tak Terbatas"
+    ]
+  }
+]
