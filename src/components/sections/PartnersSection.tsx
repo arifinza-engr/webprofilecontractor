@@ -41,7 +41,7 @@ export default function PartnersSection() {
         >
           <motion.div
             variants={fadeUp}
-            className="bg-white border border-mist/30 rounded-sm overflow-hidden shadow-sm"
+            className="bg-white border border-mist/30 rounded-2xl overflow-hidden shadow-lg shadow-ink/5 hover:shadow-2xl hover:shadow-ink/15 transition-shadow duration-500"
           >
             {/* Top accent bar */}
             <div className="h-1 bg-gradient-to-r from-gold via-gold/60 to-transparent" />
@@ -49,15 +49,18 @@ export default function PartnersSection() {
             <div className="grid md:grid-cols-2 gap-0">
 
               {/* Left — Identity */}
-              <div className="flex flex-col items-center justify-center gap-6 px-6 py-10 md:px-10 md:py-14 border-b md:border-b-0 md:border-r border-mist/20 bg-surface/40">
+              <div className="flex flex-col items-center justify-center gap-6 px-6 py-10 md:px-10 md:py-14 border-b md:border-b-0 md:border-r border-mist/20 bg-surface/40 relative overflow-hidden">
+                {/* Decorative gold blob */}
+                <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-gold/8 blur-3xl pointer-events-none" />
+
                 {/* Monogram badge */}
-                <div className="w-24 h-24 rounded-sm bg-ink flex items-center justify-center shadow-lg">
+                <div className="relative w-24 h-24 rounded-2xl bg-ink flex items-center justify-center shadow-xl shadow-ink/30">
                   <span className="font-sans text-3xl font-bold text-cream tracking-tight">
                     {partner.name.split(" ").map((w) => w[0]).join("").slice(0, 2)}
                   </span>
                 </div>
 
-                <div className="text-center">
+                <div className="relative text-center">
                   <h3 className="font-sans text-2xl font-bold text-ink">
                     {partner.name}
                   </h3>
@@ -66,14 +69,15 @@ export default function PartnersSection() {
                       {partner.tagline}
                     </p>
                   )}
+                  <div className="w-8 h-px bg-gold mx-auto mt-3" />
                 </div>
 
                 <Link
                   href={partner.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 border border-ink text-ink font-sans text-xs font-medium
-                             px-5 py-2.5 rounded-sm tracking-wide transition-all duration-300
+                  className="group relative inline-flex items-center gap-2 border border-ink text-ink font-sans text-xs font-semibold
+                             px-5 py-2.5 rounded-full tracking-wide transition-all duration-300
                              hover:bg-ink hover:text-cream"
                 >
                   Kunjungi Website
@@ -90,6 +94,7 @@ export default function PartnersSection() {
                   <p className="font-sans text-[0.7rem] font-semibold tracking-widest uppercase text-gold mb-3">
                     Tentang Kemitraan
                   </p>
+                  <div className="w-8 h-px bg-gold/40 mb-3" />
                   {partner.description && (
                     <p className="font-sans text-sm text-stone leading-relaxed">
                       {partner.description}

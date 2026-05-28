@@ -50,10 +50,11 @@ export default function LegalSection() {
             <motion.div
               key={item.id}
               variants={fadeUp}
-              className="group relative bg-white rounded-sm border border-stone/10 hover:border-gold/40 p-6 transition-all duration-300"
+              whileHover={{ y: -4, transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] } }}
+              className="group relative bg-white rounded-2xl border border-stone/10 hover:border-gold/40 p-6 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-ink/10"
             >
               <div className="flex items-start justify-between mb-5">
-                <div className="w-12 h-12 rounded-sm bg-gold/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-cream transition-colors duration-300">
+                <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-cream group-hover:border-gold transition-colors duration-300">
                   {ICONS[item.icon]}
                 </div>
                 <ShieldCheck size={14} className="text-gold/60" />
@@ -64,6 +65,7 @@ export default function LegalSection() {
               <h3 className="font-serif text-base font-bold text-ink leading-tight">
                 {item.title}
               </h3>
+              <div className="w-6 h-px bg-gold/60 mt-3 transition-all duration-300 group-hover:w-10" />
             </motion.div>
           ))}
         </motion.div>

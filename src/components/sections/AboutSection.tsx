@@ -21,18 +21,18 @@ export default function AboutSection() {
             initial="hidden"
             animate={inView ? "show" : "hidden"}
           >
-            <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
+            <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-xl shadow-ink/15 group">
               <Image
                 src="/dokumentasi/doc-04.jpg"
                 alt="Proyek CV Gabel Gemilang Indonesia"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             {/* Floating badge */}
             <motion.div
-              className="absolute right-0 -bottom-4 md:-right-6 md:-bottom-6 bg-ink text-cream p-6 rounded-sm shadow-2xl"
+              className="absolute right-0 -bottom-4 md:-right-6 md:-bottom-6 bg-ink text-cream p-6 rounded-2xl shadow-2xl shadow-ink/30 border border-cream/5"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
@@ -76,11 +76,11 @@ export default function AboutSection() {
             {/* Visi */}
             <motion.div
               variants={fadeUp}
-              className="relative bg-white border-l-2 border-gold p-5 mb-6"
+              className="relative bg-white border-l-2 border-gold rounded-r-2xl p-5 mb-6 shadow-sm shadow-ink/5"
             >
               <Quote
                 size={28}
-                className="absolute -top-3 -left-3 text-gold bg-cream p-1 rounded-full"
+                className="absolute -top-3 -left-3 text-gold bg-cream p-1 rounded-full border border-gold/30"
               />
               <p className="font-sans text-[10px] font-semibold tracking-widest uppercase text-stone/60 mb-2">
                 Visi

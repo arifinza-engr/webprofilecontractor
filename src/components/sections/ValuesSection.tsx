@@ -60,9 +60,10 @@ export default function ValuesSection() {
             <motion.div
               key={v.id}
               variants={fadeUp}
-              className="group bg-cream/40 hover:bg-cream rounded-sm border border-stone/10 hover:border-gold/40 p-6 transition-all duration-300"
+              whileHover={{ y: -4, transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] } }}
+              className="group bg-cream/40 hover:bg-cream rounded-2xl border border-stone/10 hover:border-gold/40 p-6 transition-all duration-300 shadow-sm hover:shadow-lg hover:shadow-ink/10"
             >
-              <div className="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center text-gold mb-5 group-hover:bg-gold group-hover:text-cream transition-colors duration-300">
+              <div className="w-11 h-11 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold mb-5 group-hover:bg-gold group-hover:text-cream group-hover:border-gold transition-colors duration-300">
                 {ICONS[v.icon]}
               </div>
               <p className="font-sans text-[10px] tracking-widest uppercase text-stone/60 mb-1">
@@ -71,7 +72,7 @@ export default function ValuesSection() {
               <h3 className="font-serif text-lg font-bold text-ink mb-3">
                 {v.title}
               </h3>
-              <div className="w-6 h-px bg-gold/40 mb-3" />
+              <div className="w-6 h-px bg-gold/60 mb-3 transition-all duration-300 group-hover:w-10" />
               <p className="font-sans text-xs text-stone leading-relaxed">
                 {v.description}
               </p>

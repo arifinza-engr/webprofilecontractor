@@ -126,7 +126,7 @@ export default function ContactSection() {
       {/* FLOATING CARD — overlaps hero */}
       <div className="max-w-6xl mx-auto px-5 md:px-8 -mt-32 md:-mt-44 relative z-10">
         <motion.div
-          className="bg-white rounded-sm shadow-2xl shadow-ink/15 overflow-hidden"
+          className="bg-white rounded-2xl shadow-2xl shadow-ink/15 overflow-hidden border border-white/40"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? "show" : "hidden"}
@@ -150,7 +150,7 @@ export default function ContactSection() {
                 {infoItems.map(({ icon, label, value, href, external }) => {
                   const inner = (
                     <>
-                      <div className="w-11 h-11 rounded-full bg-gold/10 flex items-center justify-center text-gold flex-shrink-0 group-hover:bg-gold group-hover:text-cream transition-colors duration-300">
+                      <div className="w-11 h-11 rounded-full bg-gold/10 border border-gold/20 flex items-center justify-center text-gold flex-shrink-0 group-hover:bg-gold group-hover:text-cream group-hover:border-gold transition-colors duration-300">
                         {icon}
                       </div>
                       <div className="min-w-0 pt-0.5">
@@ -324,14 +324,18 @@ export default function ContactSection() {
           referrerPolicy="no-referrer-when-downgrade"
           title="Lokasi CV Gabel Gemilang Indonesia"
         />
-        {/* Directions CTA — bottom-right (avoid overlap with Google's place card top-left) */}
+        {/* Directions CTA — glass pill, bottom-right (avoid overlap with Google's place card top-left) */}
         <a
           href={mapsSearchUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="absolute bottom-5 right-5 md:bottom-6 md:right-6 inline-flex items-center gap-2 bg-ink text-cream px-4 py-2.5 rounded-sm shadow-xl shadow-ink/30 font-sans text-xs font-semibold tracking-wide hover:bg-gold hover:text-ink transition-colors"
+          className="group absolute bottom-5 right-5 md:bottom-6 md:right-6 inline-flex items-center gap-2 bg-ink/95 backdrop-blur-md text-cream px-4 py-2.5 rounded-full shadow-xl shadow-ink/30 border border-cream/10 font-sans text-xs font-semibold tracking-wide hover:bg-gold hover:text-ink hover:border-gold transition-colors duration-300"
         >
-          Petunjuk Arah <ArrowUpRight size={14} />
+          Petunjuk Arah
+          <ArrowUpRight
+            size={14}
+            className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          />
         </a>
       </motion.div>
     </section>

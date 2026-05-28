@@ -95,7 +95,7 @@ export default function DocumentationSection() {
                 key={photo.id}
                 variants={fadeUp}
                 onClick={() => setActive(photo)}
-                className="group relative block w-full mb-4 break-inside-avoid rounded-sm overflow-hidden bg-mist/20 cursor-pointer"
+                className="group relative block w-full mb-4 break-inside-avoid rounded-2xl overflow-hidden bg-mist/20 cursor-pointer shadow-sm shadow-ink/5 hover:shadow-xl hover:shadow-ink/20 transition-shadow duration-500"
                 aria-label={`Perbesar: ${photo.title}`}
               >
                 <Image
@@ -108,11 +108,11 @@ export default function DocumentationSection() {
                 />
 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/0 to-ink/0 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/0 to-ink/10 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
 
-                {/* Zoom icon */}
-                <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-cream/15 backdrop-blur-md border border-cream/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ZoomIn size={14} className="text-cream" />
+                {/* Zoom icon — glass */}
+                <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-cream/15 backdrop-blur-md border border-cream/25 flex items-center justify-center text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <ZoomIn size={14} />
                 </div>
 
                 {/* Caption */}
@@ -123,6 +123,7 @@ export default function DocumentationSection() {
                   <p className="font-serif text-sm font-bold text-cream leading-tight mt-0.5">
                     {photo.title}
                   </p>
+                  <div className="w-6 h-px bg-gold mt-2 transition-all duration-300 group-hover:w-10" />
                 </div>
               </motion.button>
             ))}

@@ -63,20 +63,20 @@ function ProcessRow({
       {/* Image */}
       <motion.div
         variants={fadeUp}
-        className={cn("relative", reversed && "lg:order-2")}
+        className={cn("relative group", reversed && "lg:order-2")}
       >
         <div
           className={cn(
-            "absolute inset-0 border border-gold rounded-sm hidden lg:block transition-transform duration-500",
+            "absolute inset-0 border border-gold rounded-2xl hidden lg:block transition-transform duration-500",
             reversed ? "-translate-x-5 translate-y-5" : "translate-x-5 translate-y-5"
           )}
         />
-        <div className="relative aspect-[4/3] rounded-sm overflow-hidden bg-mist/30">
+        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-mist/30 shadow-lg shadow-ink/10">
           <Image
             src={step.image}
             alt={step.title}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
@@ -85,7 +85,7 @@ function ProcessRow({
       {/* Content */}
       <motion.div
         variants={fadeUp}
-        className={cn("relative", reversed && "lg:order-1")}
+        className={cn("relative group", reversed && "lg:order-1")}
       >
         <span
           aria-hidden="true"
@@ -98,7 +98,7 @@ function ProcessRow({
           <h3 className="font-serif text-3xl md:text-4xl font-bold text-ink leading-tight mb-5">
             {step.title}
           </h3>
-          <div className="w-12 h-px bg-gold mb-6" />
+          <div className="w-12 h-px bg-gold mb-6 transition-all duration-300 group-hover:w-20" />
           <p className="font-sans text-stone text-base leading-relaxed max-w-md">
             {step.description}
           </p>

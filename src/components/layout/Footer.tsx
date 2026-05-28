@@ -38,7 +38,7 @@ export default function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm hover:text-cream transition-colors"
+                    className="text-sm hover:text-gold transition-colors duration-300"
                   >
                     {item.label}
                   </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
                 <li key={s.id}>
                   <Link
                     href="#services"
-                    className="text-sm hover:text-cream transition-colors"
+                    className="text-sm hover:text-gold transition-colors duration-300"
                   >
                     {s.title}
                   </Link>
