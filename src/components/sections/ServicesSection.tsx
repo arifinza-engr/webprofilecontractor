@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Building2, Sofa, PencilRuler, ChevronRight } from "lucide-react";
+import { HardHat, Compass, Sofa, Armchair, ChevronRight } from "lucide-react";
 import { SERVICES } from "@/lib/data";
 import { fadeUp, stagger } from "@/lib/variants";
 import { useReveal } from "@/hooks/useReveal";
 import type { Service } from "@/types";
 
 const ICONS: Record<string, React.ReactNode> = {
-  building:      <Building2  size={24} />,
-  sofa:          <Sofa       size={24} />,
-  "pencil-ruler":<PencilRuler size={24} />,
+  "hard-hat": <HardHat  size={24} />,
+  compass:    <Compass  size={24} />,
+  sofa:       <Sofa     size={24} />,
+  armchair:   <Armchair size={24} />,
 };
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {

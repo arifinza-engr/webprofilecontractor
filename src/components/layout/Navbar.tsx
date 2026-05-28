@@ -42,10 +42,10 @@ export default function Navbar() {
       >
         <nav className="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="hover:opacity-80 transition-opacity" aria-label="GABEL Gemilang Indonesia">
+          <Link href="/" className="hover:opacity-80 transition-opacity" aria-label="CV Gabel Gemilang Indonesia">
             <Image
               src={scrolled ? "/logo.png" : "/logo-light.png"}
-              alt="GABEL Gemilang Indonesia"
+              alt="CV Gabel Gemilang Indonesia"
               width={75}
               height={22}
               priority

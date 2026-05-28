@@ -12,19 +12,19 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <p className="font-serif text-2xl font-bold text-cream mb-3">
-              GABEL<span className="text-gold"> Gemilang</span>
+              Gabel<span className="text-gold"> Gemilang</span>
             </p>
             <p className="text-sm leading-relaxed mb-5 text-cream/60">
-              Kontraktor profesional untuk konstruksi, desain interior, dan
-              drafter. Berpengalaman sejak {COMPANY.founded}.
+              General Construction, Architecture, Interior Design, dan Custom
+              Furniture. Berpengalaman sejak {COMPANY.founded}.
             </p>
             <Link
-              href={`https://www.instagram.com/${COMPANY.instagram.split("/").filter(Boolean).pop()}/`}
+              href={COMPANY.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs text-cream/50 hover:text-gold transition-colors"
             >
-              <Instagram size={14} /> @gabelindones1a
+              <Instagram size={14} /> {COMPANY.instagramHandle}
             </Link>
           </div>
 
@@ -104,7 +104,7 @@ export default function Footer() {
             © {year} {COMPANY.name}. Semua hak dilindungi.
           </p>
           <p>
-            Dibangun dengan <span className="text-gold">❤</span> di Bandung
+            Dibangun dengan <span className="text-gold">❤</span> di Indonesia
           </p>
         </div>
       </div>

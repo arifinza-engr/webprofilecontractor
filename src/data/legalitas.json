@@ -1,0 +1,26 @@
+[
+  {
+    "id": "akta",
+    "title": "Akta Pendirian Perusahaan",
+    "subtitle": "Disahkan Notaris",
+    "icon": "scroll"
+  },
+  {
+    "id": "nib",
+    "title": "Nomor Induk Berusaha",
+    "subtitle": "NIB OSS Resmi",
+    "icon": "id-card"
+  },
+  {
+    "id": "npwp",
+    "title": "NPWP Perusahaan",
+    "subtitle": "Terdaftar DJP",
+    "icon": "receipt"
+  },
+  {
+    "id": "lainnya",
+    "title": "Dokumen Legalitas Pendukung",
+    "subtitle": "Lainnya Tersedia",
+    "icon": "file-badge"
+  }
+]

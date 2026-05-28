@@ -1,13 +1,16 @@
 {
-  "name": "GABEL Gemilang",
-  "tagline": "Membangun Ruang, Mewujudkan Impian.",
-  "description": "Kontraktor profesional berpengalaman lebih dari 10 tahun di bidang konstruksi, desain interior, dan jasa drafter. Kami menghadirkan solusi bangunan berkualitas tinggi dengan ketepatan waktu dan anggaran.",
+  "name": "CV Gabel Gemilang Indonesia",
+  "shortName": "Gabel Gemilang",
+  "tagline": "Bukan sekadar membangun ruang, tapi menciptakan lingkungan yang fungsional, nyaman, dan berdampak positif.",
+  "description": "Perusahaan yang bergerak di bidang General Construction, Architecture, Interior Design, dan Custom Furniture sejak 2021. Kami menghadirkan solusi desain dan konstruksi yang fungsional, modern, dan berkualitas tinggi untuk kebutuhan residential maupun commercial.",
   "address": "Jl.Pergiwo N0 80, Kec. Taman, Kabupaten Pemalang, Jawa Tengah, 52361",
   "phone": "+62 852 6765 9308",
   "email": "gabelgemilangindonesia@gmail.com",
   "whatsapp": "6285267659308",
-  "whatsappMsg": "Halo GABEL Gemilang, saya ingin konsultasi proyek.",
+  "whatsappMsg": "Halo CV Gabel Gemilang Indonesia, saya ingin konsultasi proyek.",
   "instagram": "https://www.instagram.com/gabelindones1a/",
+  "instagramHandle": "@gabelindones1a",
   "maps": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9263744533628!2d109.4070186!3d-6.899408999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdb00121174e7%3A0xff88a7b07cb6a033!2sGabel%20Gemilang%20indonesia!5e0!3m2!1sid!2sid!4v1778700662665!5m2!1sid!2sid",
-  "founded": 2013
+  "founded": 2021,
+  "hours": "Senin – Sabtu · 08:00 – 20:00 WIB"
 }

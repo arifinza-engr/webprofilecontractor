@@ -11,10 +11,10 @@ import { useReveal } from "@/hooks/useReveal";
 import type { PortfolioCategory } from "@/types";
 
 const FILTERS: { label: string; value: PortfolioCategory }[] = [
-  { label: "Semua",       value: "all"         },
-  { label: "Konstruksi",  value: "konstruksi"  },
-  { label: "Interior",    value: "interior"    },
-  { label: "Drafter",     value: "drafter"     },
+  { label: "Semua",        value: "all"          },
+  { label: "Konstruksi",   value: "construction" },
+  { label: "Arsitektur",   value: "architecture" },
+  { label: "Interior",     value: "interior"     },
 ];
 
 export default function PortfolioSection() {

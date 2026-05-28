@@ -35,7 +35,7 @@ export default function ContactSection() {
 
   const waUrl = buildWhatsAppUrl(
     COMPANY.whatsapp,
-    `Halo GABEL Gemilang!\n\nNama: ${form.name}\nNo HP: ${form.phone}\nLayanan: ${form.service}\nPesan: ${form.message}`,
+    `Halo CV Gabel Gemilang Indonesia!\n\nNama: ${form.name}\nNo HP: ${form.phone}\nLayanan: ${form.service}\nPesan: ${form.message}`,
   );
 
   const mailtoUrl = `mailto:${COMPANY.email}?subject=Konsultasi Proyek – ${form.name}&body=${encodeURIComponent(
@@ -80,7 +80,7 @@ export default function ContactSection() {
     {
       icon: <Clock size={18} />,
       label: "Jam Kerja",
-      value: "Senin – Sabtu · 08:00 – 17:00 WIB",
+      value: COMPANY.hours,
     },
   ];
 
@@ -322,7 +322,7 @@ export default function ContactSection() {
           className="block w-full h-[420px] md:h-[480px] border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Lokasi GABEL Gemilang"
+          title="Lokasi CV Gabel Gemilang Indonesia"
         />
         {/* Directions CTA — bottom-right (avoid overlap with Google's place card top-left) */}
         <a

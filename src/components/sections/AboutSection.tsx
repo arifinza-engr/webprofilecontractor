@@ -2,29 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
+import { Quote } from "lucide-react";
 import { fadeUp, slideLeft, stagger } from "@/lib/variants";
 import { useReveal } from "@/hooks/useReveal";
-import { COMPANY } from "@/lib/data";
-
-const VALUES = [
-  {
-    title: "Kualitas Terukur",
-    desc: "Standar material dan pengerjaan terbaik di setiap proyek.",
-  },
-  {
-    title: "Tepat Waktu",
-    desc: "Komitmen penuh terhadap jadwal yang telah disepakati.",
-  },
-  {
-    title: "Transparan & Jujur",
-    desc: "RAB terbuka, tidak ada biaya tersembunyi.",
-  },
-  {
-    title: "Garansi Pekerjaan",
-    desc: "Garansi struktur 5 tahun dan finishing 1 tahun.",
-  },
-];
+import { COMPANY, VISI_MISI } from "@/lib/data";
 
 export default function AboutSection() {
   const { ref, inView } = useReveal({ threshold: 0.1 });
@@ -42,8 +23,8 @@ export default function AboutSection() {
           >
             <div className="aspect-[4/5] relative rounded-sm overflow-hidden">
               <Image
-                src="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f"
-                alt="Tim GABEL Gemilang di lapangan"
+                src="/dokumentasi/doc-04.jpg"
+                alt="Proyek CV Gabel Gemilang Indonesia"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -57,7 +38,8 @@ export default function AboutSection() {
               transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
             >
               <p className="font-serif text-4xl font-bold">
-                10<span className="text-gold">+</span>
+                {new Date().getFullYear() - COMPANY.founded}
+                <span className="text-gold">+</span>
               </p>
               <p className="font-sans text-xs tracking-widest uppercase text-cream/60 mt-1">
                 Tahun
@@ -71,7 +53,7 @@ export default function AboutSection() {
 
           {/* Text side */}
           <motion.div
-            variants={stagger(0.1, 0.2)}
+            variants={stagger(0.08, 0.2)}
             initial="hidden"
             animate={inView ? "show" : "hidden"}
           >
@@ -79,9 +61,9 @@ export default function AboutSection() {
               Tentang Kami
             </motion.span>
             <motion.h2 variants={fadeUp} className="section-title mb-2">
-              Membangun Kepercayaan
+              Membangun Ruang,
               <br />
-              <em className="text-stone">Satu Proyek Setiap Saat</em>
+              <em className="text-stone">Mewujudkan Kepercayaan</em>
             </motion.h2>
             <motion.div variants={fadeUp} className="divider mb-6" />
             <motion.p
@@ -91,31 +73,38 @@ export default function AboutSection() {
               {COMPANY.description}
             </motion.p>
 
-            {/* Values grid */}
+            {/* Visi */}
             <motion.div
-              variants={stagger(0.08)}
-              className="grid sm:grid-cols-2 gap-5 mb-8"
+              variants={fadeUp}
+              className="relative bg-white border-l-2 border-gold p-5 mb-6"
             >
-              {VALUES.map((v) => (
-                <motion.div
-                  key={v.title}
-                  variants={fadeUp}
-                  className="flex gap-3"
-                >
-                  <CheckCircle2
-                    size={18}
-                    className="text-gold flex-shrink-0 mt-0.5"
-                  />
-                  <div>
-                    <p className="font-sans font-semibold text-sm text-ink">
-                      {v.title}
-                    </p>
-                    <p className="font-sans text-xs text-stone mt-0.5 leading-relaxed">
-                      {v.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+              <Quote
+                size={28}
+                className="absolute -top-3 -left-3 text-gold bg-cream p-1 rounded-full"
+              />
+              <p className="font-sans text-[10px] font-semibold tracking-widest uppercase text-stone/60 mb-2">
+                Visi
+              </p>
+              <p className="font-serif text-base text-ink leading-relaxed italic">
+                “{VISI_MISI.visi}”
+              </p>
+            </motion.div>
+
+            {/* Misi */}
+            <motion.div variants={fadeUp} className="mb-8">
+              <p className="font-sans text-[10px] font-semibold tracking-widest uppercase text-stone/60 mb-3">
+                Misi
+              </p>
+              <ol className="space-y-2.5">
+                {VISI_MISI.misi.map((m, i) => (
+                  <li key={i} className="flex gap-3 text-sm text-stone leading-relaxed">
+                    <span className="font-serif font-bold text-gold flex-shrink-0 w-5">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span>{m}</span>
+                  </li>
+                ))}
+              </ol>
             </motion.div>
 
             <motion.a variants={fadeUp} href="#contact" className="btn-primary">

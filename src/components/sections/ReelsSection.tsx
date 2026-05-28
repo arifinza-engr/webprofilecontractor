@@ -123,7 +123,7 @@ export default function ReelsSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 btn-outline"
             >
-              <Instagram size={16} /> Follow @gabelindones1a
+              <Instagram size={16} /> Follow {COMPANY.instagramHandle}
             </a>
           </motion.div>
         </motion.div>
