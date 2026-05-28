@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Play, Instagram, X } from "lucide-react";
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { Instagram, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { REELS, COMPANY } from "@/lib/data";
-import { fadeUp, stagger } from "@/lib/variants";
+import { fadeUp, fadeIn, stagger } from "@/lib/variants";
 import { useReveal } from "@/hooks/useReveal";
 import type { InstagramReel } from "@/types";
 
@@ -12,139 +12,137 @@ function embedUrl(url: string) {
   return url.replace(/\/?$/, "/embed/");
 }
 
-function ReelModal({ reel, onClose }: { reel: InstagramReel; onClose: () => void }) {
+function ReelCard({ reel, ready }: { reel: InstagramReel; ready: boolean }) {
   return (
-    <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 z-50 flex items-center justify-center p-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      >
-        <motion.div className="absolute inset-0 bg-ink/80 backdrop-blur-sm" onClick={onClose} />
-        <motion.div
-          className="relative z-10 w-full max-w-sm"
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          transition={{ type: "spring", stiffness: 300, damping: 25 }}
-        >
-          <button
-            onClick={onClose}
-            className="absolute -top-10 right-0 text-white/80 hover:text-white transition-colors"
-            aria-label="Tutup"
-          >
-            <X size={28} />
-          </button>
-          <div className="rounded-xl overflow-hidden bg-white">
+    <div className="snap-start shrink-0 w-[290px] md:w-[320px]">
+      <div className="group relative rounded-2xl overflow-hidden bg-ink h-[520px] shadow-lg shadow-ink/10 hover:shadow-xl hover:shadow-ink/25 transition-shadow duration-500 ring-1 ring-ink/5">
+        {ready ? (
+          <>
+            {/*
+              The Instagram embed renders its own chrome (profile header + caption
+              footer). We crop the header by offsetting the iframe up, and crop the
+              footer by letting the over-tall iframe overflow past the fixed-height
+              card. The result shows only the reel media itself.
+              Tune CROP via top-[-56px] / height if IG changes their embed layout.
+            */}
             <iframe
               src={embedUrl(reel.url)}
-              className="w-full border-none"
-              style={{ minHeight: 560 }}
-              allowFullScreen
+              className="absolute left-0 w-full h-[860px] top-[-56px] border-0"
               scrolling="no"
+              allowFullScreen
               title={reel.title}
             />
-          </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  );
-}
 
-function ReelCard({ reel, onClick }: { reel: InstagramReel; onClick: () => void }) {
-  return (
-    <motion.div
-      variants={fadeUp}
-      className="group relative rounded-sm overflow-hidden cursor-pointer bg-gray-100"
-      whileHover={{ scale: 1.02, transition: { duration: 0.25 } }}
-      onClick={onClick}
-    >
-      <div className="aspect-[9/16] relative overflow-hidden">
-        {/* Thumbnail dari JSON */}
-        {reel.thumbnail && (
-          <img
-            src={reel.thumbnail}
-            alt={reel.title}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+            {/* Hide the cropped-header seam */}
+            <div className="absolute top-0 inset-x-0 h-8 bg-gradient-to-b from-ink/30 to-transparent pointer-events-none" />
+
+            {/* Bottom gradient + custom caption (covers IG footer) */}
+            <div className="absolute bottom-0 inset-x-0 pt-20 pb-5 px-5 bg-gradient-to-t from-ink via-ink/85 to-transparent pointer-events-none">
+              <div className="flex items-center gap-2 mb-2">
+                <Instagram size={12} className="text-gold" />
+                <span className="font-sans text-[9px] font-semibold tracking-widest uppercase text-cream/55">
+                  Reel
+                </span>
+                <span className="ml-auto w-6 h-px bg-gold/50" />
+              </div>
+              <p className="font-serif text-cream text-[15px] font-bold leading-snug line-clamp-2">
+                {reel.title}
+              </p>
+            </div>
+          </>
+        ) : (
+          // Lightweight placeholder shown until the section scrolls into view
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-ink via-stone/80 to-ink px-6 text-center">
+            <div className="w-14 h-14 rounded-full bg-cream/10 border border-cream/25 flex items-center justify-center">
+              <Play size={20} className="text-cream ml-0.5" fill="currentColor" />
+            </div>
+            <p className="font-serif text-cream text-sm font-bold leading-snug">
+              {reel.title}
+            </p>
+            <span className="font-sans text-[10px] tracking-widest uppercase text-cream/40">
+              Memuat dari Instagram…
+            </span>
+          </div>
         )}
-
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent pointer-events-none" />
-
-        {/* Play button */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
-            <Play size={18} className="text-white ml-1" fill="white" />
-          </div>
-        </div>
-
-        {/* Judul dari JSON */}
-        <div className="absolute bottom-0 left-0 right-0 p-3 pointer-events-none">
-          <p className="font-sans text-white text-xs font-medium leading-tight line-clamp-2">
-            {reel.title}
-          </p>
-        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function ReelsSection() {
-  const { ref, inView } = useReveal({ threshold: 0.08 });
-  const [activeReel, setActiveReel] = useState<InstagramReel | null>(null);
+  const { ref, inView } = useReveal({ threshold: 0.1 });
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  const scrollBy = (dir: 1 | -1) => {
+    scrollerRef.current?.scrollBy({ left: dir * 340, behavior: "smooth" });
+  };
 
   return (
-    <>
-      <section id="reels" className="py-24 md:py-32 bg-white" ref={ref}>
-        <div className="max-w-7xl mx-auto px-5 md:px-8">
-          {/* Header */}
-          <motion.div
-            className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
-            variants={stagger(0.1)}
-            initial="hidden"
-            animate={inView ? "show" : "hidden"}
-          >
-            <div>
-              <motion.span variants={fadeUp} className="section-label">
-                Konten Kami
-              </motion.span>
-              <motion.h2 variants={fadeUp} className="section-title">
-                Behind the Build
-                <br />
-                di Instagram
-              </motion.h2>
-              <motion.div variants={fadeUp} className="divider mt-4" />
+    <section id="reels" className="py-24 md:py-32 bg-white overflow-hidden" ref={ref}>
+      {/* Header */}
+      <div className="max-w-7xl mx-auto px-5 md:px-8">
+        <motion.div
+          className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-14 gap-6"
+          variants={stagger(0.1)}
+          initial="hidden"
+          animate={inView ? "show" : "hidden"}
+        >
+          <div>
+            <motion.span variants={fadeUp} className="section-label">
+              Konten Kami
+            </motion.span>
+            <motion.h2 variants={fadeUp} className="section-title">
+              Behind the Build
+              <br />
+              di Instagram
+            </motion.h2>
+            <motion.div variants={fadeUp} className="divider mt-4" />
+          </div>
+
+          <motion.div variants={fadeUp} className="flex items-center gap-3 self-start md:self-auto">
+            {/* Carousel controls */}
+            <div className="hidden sm:flex items-center gap-2">
+              <button
+                onClick={() => scrollBy(-1)}
+                className="w-10 h-10 rounded-full border border-mist flex items-center justify-center text-ink hover:bg-ink hover:text-cream hover:border-ink transition-colors"
+                aria-label="Sebelumnya"
+              >
+                <ChevronLeft size={18} />
+              </button>
+              <button
+                onClick={() => scrollBy(1)}
+                className="w-10 h-10 rounded-full border border-mist flex items-center justify-center text-ink hover:bg-ink hover:text-cream hover:border-ink transition-colors"
+                aria-label="Berikutnya"
+              >
+                <ChevronRight size={18} />
+              </button>
             </div>
-            <motion.a
-              variants={fadeUp}
+            <a
               href={COMPANY.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 btn-outline self-start md:self-auto"
+              className="inline-flex items-center gap-2 btn-outline"
             >
               <Instagram size={16} /> Follow @gabelindones1a
-            </motion.a>
+            </a>
           </motion.div>
+        </motion.div>
+      </div>
 
-          {/* Reels grid */}
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
-            variants={stagger(0.08)}
-            initial="hidden"
-            animate={inView ? "show" : "hidden"}
-          >
-            {REELS.map((reel) => (
-              <ReelCard key={reel.id} reel={reel} onClick={() => setActiveReel(reel)} />
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {activeReel && (
-        <ReelModal reel={activeReel} onClose={() => setActiveReel(null)} />
-      )}
-    </>
+      {/* Horizontal reel carousel */}
+      <motion.div
+        ref={scrollerRef}
+        className="flex gap-4 md:gap-5 overflow-x-auto snap-x snap-mandatory no-scrollbar px-5 md:px-8 pb-2"
+        variants={fadeIn}
+        initial="hidden"
+        animate={inView ? "show" : "hidden"}
+      >
+        {REELS.map((reel) => (
+          <ReelCard key={reel.id} reel={reel} ready={inView} />
+        ))}
+        {/* trailing spacer so last card isn't flush to edge */}
+        <div className="shrink-0 w-1" aria-hidden="true" />
+      </motion.div>
+    </section>
   );
 }

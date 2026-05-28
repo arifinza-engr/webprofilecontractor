@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -41,18 +42,19 @@ export default function Navbar() {
       >
         <nav className="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link
-            href="/"
-            className={cn(
-              "font-serif text-xl font-bold tracking-tight hover:opacity-80 transition-opacity",
-              scrolled ? "text-ink" : "text-cream"
-            )}
-          >
-            GABEL<span className="text-gold"> Gemilang</span>
+          <Link href="/" className="hover:opacity-80 transition-opacity" aria-label="GABEL Gemilang Indonesia">
+            <Image
+              src={scrolled ? "/logo.png" : "/logo-light.png"}
+              alt="GABEL Gemilang Indonesia"
+              width={75}
+              height={22}
+              priority
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-5 xl:gap-7">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <Link

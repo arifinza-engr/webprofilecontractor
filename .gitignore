@@ -36,6 +36,15 @@ yarn-error.log*
 # vercel
 .vercel
 
+# raw source assets (originals, archives) — too large for the repo.
+# Optimized/curated images live in /public instead.
+/assests
+*.zip
+*.rar
+
+# image-review artifacts (contact sheets + manifest, regenerable)
+/scripts/_review
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -31,13 +31,21 @@ export interface Testimonial {
   avatar:   string;
 }
 
-export interface TeamMember {
+export interface ProcessStep {
+  id:          string;
+  step:        string;
+  title:       string;
+  description: string;
+  image:       string;
+}
+
+export interface DocPhoto {
   id:       string;
-  name:     string;
-  role:     string;
-  bio:      string;
+  title:    string;
+  category: string;
   image:    string;
-  linkedin?: string;
+  width:    number;
+  height:   number;
 }
 
 export interface Partner {
@@ -51,11 +59,9 @@ export interface Partner {
 }
 
 export interface InstagramReel {
-  id:        string;
-  title:     string;
-  thumbnail?: string;
-  url:       string;
-  views?:    string;
+  id:    string;
+  title: string;
+  url:   string;
 }
 
 export interface Stat {

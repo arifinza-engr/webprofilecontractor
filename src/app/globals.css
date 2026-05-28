@@ -83,4 +83,43 @@
   .clip-path-diagonal {
     clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
   }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .marquee-track {
+    animation: marquee 55s linear infinite;
+    will-change: transform;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 5%,
+      black 95%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 5%,
+      black 95%,
+      transparent 100%
+    );
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }

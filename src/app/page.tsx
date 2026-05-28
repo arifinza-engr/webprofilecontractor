@@ -6,10 +6,11 @@ import StatsSection        from "@/components/sections/StatsSection";
 import AboutSection        from "@/components/sections/AboutSection";
 import ServicesSection     from "@/components/sections/ServicesSection";
 import PortfolioSection    from "@/components/sections/PortfolioSection";
+import DocumentationSection from "@/components/sections/DocumentationSection";
 import ReelsSection        from "@/components/sections/ReelsSection";
 import PartnersSection     from "@/components/sections/PartnersSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import TeamSection         from "@/components/sections/TeamSection";
+import ProcessSection      from "@/components/sections/ProcessSection";
 import FAQSection          from "@/components/sections/FAQSection";
 import ContactSection      from "@/components/sections/ContactSection";
 
@@ -24,10 +25,11 @@ export default function HomePage() {
         <AboutSection />
         <ServicesSection />
         <PortfolioSection />
+        <DocumentationSection />
         <ReelsSection />
         <PartnersSection />
         <TestimonialsSection />
-        <TeamSection />
+        <ProcessSection />
         <FAQSection />
         <ContactSection />
       </main>

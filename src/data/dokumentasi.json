@@ -1,0 +1,98 @@
+[
+  {
+    "id": "doc-01",
+    "title": "Hunian Modern Hillside",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-01.jpg",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "doc-02",
+    "title": "Pembangunan Gudang Industri",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-02.jpg",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "doc-03",
+    "title": "Resepsionis Kantor Kustom",
+    "category": "interior",
+    "image": "/dokumentasi/doc-03.jpg",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "doc-04",
+    "title": "Pengecoran Struktur Skala Besar",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-04.jpg",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "doc-05",
+    "title": "Struktur Baja Bentang Lebar",
+    "category": "struktur",
+    "image": "/dokumentasi/doc-05.jpg",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "doc-06",
+    "title": "Dapur Custom Modern",
+    "category": "interior",
+    "image": "/dokumentasi/doc-06.jpg",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "id": "doc-07",
+    "title": "Fasad Arsitektural Kustom",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-07.jpg",
+    "width": 1280,
+    "height": 1600
+  },
+  {
+    "id": "doc-08",
+    "title": "Pengerjaan Lantai Gudang",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-08.jpg",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "doc-09",
+    "title": "Interior Kantor Korporat",
+    "category": "interior",
+    "image": "/dokumentasi/doc-09.jpg",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "doc-10",
+    "title": "Hunian Dua Lantai Modern",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-10.jpg",
+    "width": 1600,
+    "height": 1600
+  },
+  {
+    "id": "doc-11",
+    "title": "Ruang Keluarga Residensial",
+    "category": "interior",
+    "image": "/dokumentasi/doc-11.jpg",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "id": "doc-12",
+    "title": "Detail Fasad Modern",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-12.jpg",
+    "width": 900,
+    "height": 1600
+  }
+]

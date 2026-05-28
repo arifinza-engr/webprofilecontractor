@@ -1,0 +1,30 @@
+[
+  {
+    "id": "p1",
+    "step": "01",
+    "title": "Konsultasi & Perencanaan",
+    "description": "Diskusi mendalam tentang kebutuhan, anggaran, dan jadwal proyek Anda. Kami pelajari lokasi dan visi sebelum menyusun proposal.",
+    "image": "https://images.unsplash.com/photo-1619531703242-7a0eaf09839c?w=700&q=80"
+  },
+  {
+    "id": "p2",
+    "step": "02",
+    "title": "Desain & RAB",
+    "description": "Penyusunan gambar kerja 2D, visualisasi 3D, dan Rencana Anggaran Biaya yang detail dan transparan untuk persetujuan Anda.",
+    "image": "https://images.unsplash.com/photo-1721244654394-36a7bc2da288?w=700&q=80"
+  },
+  {
+    "id": "p3",
+    "step": "03",
+    "title": "Eksekusi & Pengawasan",
+    "description": "Pelaksanaan konstruksi oleh tim profesional dengan pengawasan harian dan laporan berkala untuk memastikan kualitas dan ketepatan waktu.",
+    "image": "https://images.unsplash.com/photo-1567954970774-58d6aa6c50dc?w=900&q=80"
+  },
+  {
+    "id": "p4",
+    "step": "04",
+    "title": "Serah Terima & Garansi",
+    "description": "Inspeksi akhir bersama Anda, serah terima resmi, dan garansi struktur serta finishing untuk ketenangan pikiran jangka panjang.",
+    "image": "https://images.unsplash.com/photo-1733244766159-f58f4184fd38?w=700&q=80"
+  }
+]
