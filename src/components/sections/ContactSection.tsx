@@ -11,7 +11,7 @@ import {
   ArrowUpRight,
   Instagram,
 } from "lucide-react";
-import { COMPANY } from "@/lib/data";
+import { COMPANY, SERVICES } from "@/lib/data";
 import { buildWhatsAppUrl } from "@/lib/utils";
 import { fadeUp, stagger } from "@/lib/variants";
 import { useReveal } from "@/hooks/useReveal";
@@ -266,9 +266,9 @@ export default function ContactSection() {
                     className={inputClass}
                   >
                     <option value="">Pilih Layanan</option>
-                    <option>Konstruksi</option>
-                    <option>Desain Interior</option>
-                    <option>Drafter & RAB</option>
+                    {SERVICES.map((s) => (
+                      <option key={s.id}>{s.title}</option>
+                    ))}
                     <option>Kombinasi / Paket</option>
                   </select>
                 </div>
