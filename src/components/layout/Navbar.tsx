@@ -46,10 +46,10 @@ export default function Navbar() {
             <Image
               src={scrolled ? "/logo.png" : "/logo-light.png"}
               alt="CV Gabel Gemilang Indonesia"
-              width={75}
-              height={22}
+              width={497}
+              height={132}
               priority
-              className="h-8 w-auto"
+              className="h-9 w-auto"
             />
           </Link>
 
