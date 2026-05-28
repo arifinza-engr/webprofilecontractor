@@ -62,7 +62,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.35 }}
           >
-            Konstruksi, desain interior, dan jasa drafter berkualitas tinggi untuk hunian dan komersial Anda.
+            General Construction, Architecture, Interior Design, dan Custom Furniture untuk kebutuhan hunian dan komersial Anda.
           </motion.p>
 
           {/* CTAs */}
@@ -89,19 +89,19 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll hint */}
+      {/* Scroll hint — glass pill */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-cream/50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2.5 px-4 py-2 rounded-full bg-cream/10 backdrop-blur-md border border-cream/20 text-cream/70"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.55 }}
       >
         <span className="font-sans text-[0.6rem] tracking-widest uppercase">Scroll</span>
         <motion.div
-          animate={{ y: [0, 6, 0] }}
+          animate={{ y: [0, 4, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
         >
-          <ArrowDown size={14} />
+          <ArrowDown size={12} className="text-gold" />
         </motion.div>
       </motion.div>
     </section>

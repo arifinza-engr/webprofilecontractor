@@ -43,7 +43,7 @@ function ReelCard({ reel, ready }: { reel: InstagramReel; ready: boolean }) {
                 <span className="font-sans text-[9px] font-semibold tracking-widest uppercase text-cream/55">
                   Reel
                 </span>
-                <span className="ml-auto w-6 h-px bg-gold/50" />
+                <span className="ml-auto w-6 h-px bg-gold/50 transition-all duration-300 group-hover:w-10" />
               </div>
               <p className="font-serif text-cream text-[15px] font-bold leading-snug line-clamp-2">
                 {reel.title}
@@ -100,18 +100,18 @@ export default function ReelsSection() {
           </div>
 
           <motion.div variants={fadeUp} className="flex items-center gap-3 self-start md:self-auto">
-            {/* Carousel controls */}
+            {/* Carousel controls — glass */}
             <div className="hidden sm:flex items-center gap-2">
               <button
                 onClick={() => scrollBy(-1)}
-                className="w-10 h-10 rounded-full border border-mist flex items-center justify-center text-ink hover:bg-ink hover:text-cream hover:border-ink transition-colors"
+                className="w-10 h-10 rounded-full bg-cream/40 backdrop-blur-md border border-mist/60 flex items-center justify-center text-ink hover:bg-ink hover:text-cream hover:border-ink transition-all duration-300"
                 aria-label="Sebelumnya"
               >
                 <ChevronLeft size={18} />
               </button>
               <button
                 onClick={() => scrollBy(1)}
-                className="w-10 h-10 rounded-full border border-mist flex items-center justify-center text-ink hover:bg-ink hover:text-cream hover:border-ink transition-colors"
+                className="w-10 h-10 rounded-full bg-cream/40 backdrop-blur-md border border-mist/60 flex items-center justify-center text-ink hover:bg-ink hover:text-cream hover:border-ink transition-all duration-300"
                 aria-label="Berikutnya"
               >
                 <ChevronRight size={18} />
@@ -123,7 +123,7 @@ export default function ReelsSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 btn-outline"
             >
-              <Instagram size={16} /> Follow @gabelindones1a
+              <Instagram size={16} /> Follow {COMPANY.instagramHandle}
             </a>
           </motion.div>
         </motion.div>

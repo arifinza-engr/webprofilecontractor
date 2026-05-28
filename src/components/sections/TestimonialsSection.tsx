@@ -27,8 +27,12 @@ export default function TestimonialsSection() {
   const t = TESTIMONIALS[idx];
 
   return (
-    <section className="py-24 md:py-32 bg-ink text-cream" ref={ref}>
-      <div className="max-w-4xl mx-auto px-5 md:px-8 text-center">
+    <section className="py-24 md:py-32 bg-ink text-cream relative overflow-hidden" ref={ref}>
+      {/* Decorative gold blobs */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-gold/8 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-4xl mx-auto px-5 md:px-8 text-center">
 
         <motion.span
           className="font-sans text-[0.65rem] font-semibold tracking-widest uppercase text-cream/40 block mb-4"
@@ -93,8 +97,8 @@ export default function TestimonialsSection() {
         <div className="flex items-center justify-center gap-4 mt-8">
           <button
             onClick={() => paginate(-1)}
-            className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center
-                       text-cream/50 hover:text-cream hover:border-cream transition-all"
+            className="w-11 h-11 rounded-full bg-cream/5 backdrop-blur-md border border-cream/20 flex items-center justify-center
+                       text-cream/60 hover:text-ink hover:bg-gold hover:border-gold transition-all duration-300"
             aria-label="Previous"
           >
             <ChevronLeft size={18} />
@@ -113,8 +117,8 @@ export default function TestimonialsSection() {
 
           <button
             onClick={() => paginate(1)}
-            className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center
-                       text-cream/50 hover:text-cream hover:border-cream transition-all"
+            className="w-11 h-11 rounded-full bg-cream/5 backdrop-blur-md border border-cream/20 flex items-center justify-center
+                       text-cream/60 hover:text-ink hover:bg-gold hover:border-gold transition-all duration-300"
             aria-label="Next"
           >
             <ChevronRight size={18} />

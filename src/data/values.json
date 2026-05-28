@@ -1,0 +1,48 @@
+{
+  "values": [
+    {
+      "id": "integrity",
+      "title": "Integrity",
+      "subtitle": "Integritas",
+      "icon": "shield",
+      "description": "Menjunjung tinggi kejujuran, profesionalisme, dan tanggung jawab dalam setiap pekerjaan."
+    },
+    {
+      "id": "quality",
+      "title": "Quality",
+      "subtitle": "Kualitas",
+      "icon": "gem",
+      "description": "Kualitas menjadi prioritas utama dalam memberikan hasil konstruksi, interior, dan furniture terbaik."
+    },
+    {
+      "id": "innovation",
+      "title": "Innovation",
+      "subtitle": "Inovasi",
+      "icon": "lightbulb",
+      "description": "Menghadirkan ide, desain, dan solusi modern yang fungsional sesuai perkembangan kebutuhan."
+    },
+    {
+      "id": "commitment",
+      "title": "Commitment",
+      "subtitle": "Komitmen",
+      "icon": "handshake",
+      "description": "Komitmen terhadap ketepatan waktu, pelayanan, dan kepuasan klien menjadi bagian penting dari setiap proyek."
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability",
+      "subtitle": "Keberlanjutan",
+      "icon": "leaf",
+      "description": "Menciptakan pekerjaan yang tidak hanya estetis dan fungsional, tetapi juga memperhatikan keberlanjutan lingkungan."
+    }
+  ],
+  "advantages": [
+    "Tenaga kerja profesional dan berpengalaman",
+    "Desain modern dan fungsional",
+    "Material berkualitas tinggi",
+    "Pengerjaan rapi dan detail",
+    "Ketepatan waktu pengerjaan",
+    "Pelayanan konsultasi dan komunikasi yang baik",
+    "Mengutamakan kepuasan klien"
+  ]
+}

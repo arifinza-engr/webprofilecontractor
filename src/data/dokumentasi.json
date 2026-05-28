@@ -94,5 +94,69 @@
     "image": "/dokumentasi/doc-12.jpg",
     "width": 900,
     "height": 1600
+  },
+  {
+    "id": "doc-13",
+    "title": "Storefront Kafe Komersial",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-13.jpg",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "doc-14",
+    "title": "Interior Kafe Modern",
+    "category": "interior",
+    "image": "/dokumentasi/doc-14.jpg",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "doc-15",
+    "title": "Partisi Dekoratif Custom",
+    "category": "interior",
+    "image": "/dokumentasi/doc-15.jpg",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "doc-16",
+    "title": "Signage 3D Kustom",
+    "category": "interior",
+    "image": "/dokumentasi/doc-16.jpg",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "id": "doc-17",
+    "title": "Partisi Wood Slat",
+    "category": "interior",
+    "image": "/dokumentasi/doc-17.jpg",
+    "width": 780,
+    "height": 1040
+  },
+  {
+    "id": "doc-18",
+    "title": "Eksterior Gedung Komersial",
+    "category": "konstruksi",
+    "image": "/dokumentasi/doc-18.jpg",
+    "width": 1440,
+    "height": 1440
+  },
+  {
+    "id": "doc-19",
+    "title": "Kanopi Baja Industrial",
+    "category": "struktur",
+    "image": "/dokumentasi/doc-19.jpg",
+    "width": 900,
+    "height": 1600
+  },
+  {
+    "id": "doc-20",
+    "title": "Skylight Struktur Baja",
+    "category": "struktur",
+    "image": "/dokumentasi/doc-20.jpg",
+    "width": 1440,
+    "height": 1440
   }
 ]

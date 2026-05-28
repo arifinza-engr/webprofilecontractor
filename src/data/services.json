@@ -1,44 +1,58 @@
 [
   {
-    "id": "konstruksi",
-    "title": "Konstruksi",
-    "description": "Pembangunan struktur dari pondasi hingga finishing dengan standar kualitas tinggi, ketepatan jadwal, dan efisiensi anggaran.",
-    "icon": "building",
+    "id": "construction",
+    "title": "General Construction",
+    "description": "Pembangunan, renovasi, dan pekerjaan konstruksi untuk kebutuhan residential maupun commercial dengan standar kualitas terbaik.",
+    "icon": "hard-hat",
     "image": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
     "features": [
-      "Konstruksi Rumah Tinggal",
-      "Gedung Komersial & Perkantoran",
+      "Pembangunan Baru",
       "Renovasi & Restorasi",
+      "Konstruksi Komersial",
       "Manajemen Proyek End-to-End",
       "Pengawasan Lapangan"
     ]
   },
   {
-    "id": "interior",
-    "title": "Desain Interior",
-    "description": "Transformasi ruang menjadi lingkungan yang fungsional, estetis, dan mencerminkan kepribadian penghuni.",
-    "icon": "sofa",
-    "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80",
+    "id": "architecture",
+    "title": "Architecture",
+    "description": "Jasa desain arsitektur modern dan fungsional, sesuai dengan karakter, lokasi, serta kebutuhan klien.",
+    "icon": "compass",
+    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
     "features": [
-      "Konsep & Perencanaan Ruang",
-      "Pemilihan Material & Furnitur",
-      "Custom Furniture & Joinery",
-      "Pencahayaan & Mekanikal",
-      "Eksekusi & Instalasi"
+      "Konsep & Master Plan",
+      "Gambar Kerja Arsitektur",
+      "Visualisasi 3D Rendering",
+      "Konsultasi Desain",
+      "Revisi Hingga Disetujui"
     ]
   },
   {
-    "id": "drafter",
-    "title": "Drafter & RAB",
-    "description": "Penyusunan gambar kerja, denah, tampak, potongan, dan Rencana Anggaran Biaya (RAB) yang akurat dan terperinci.",
-    "icon": "pencil-ruler",
-    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "id": "interior",
+    "title": "Interior Design",
+    "description": "Desain interior yang nyaman, estetis, dan efisien untuk rumah, kantor, retail, café, hingga ruang komersial lainnya.",
+    "icon": "sofa",
+    "image": "/dokumentasi/doc-09.jpg",
     "features": [
-      "Gambar Kerja 2D (AutoCAD)",
-      "Visualisasi 3D Rendering",
-      "RAB Detail & Spesifikasi",
-      "Gambar As-Built",
-      "Revisi Tak Terbatas"
+      "Konsep & Perencanaan Ruang",
+      "Pemilihan Material & Furnitur",
+      "Pencahayaan & Mekanikal",
+      "Eksekusi & Instalasi",
+      "Styling Akhir"
+    ]
+  },
+  {
+    "id": "furniture",
+    "title": "Custom Furniture",
+    "description": "Furniture custom dengan desain eksklusif, material pilihan, dan pengerjaan detail yang dirancang khusus untuk setiap ruang.",
+    "icon": "armchair",
+    "image": "/dokumentasi/doc-03.jpg",
+    "features": [
+      "Desain Eksklusif Custom",
+      "Material Pilihan",
+      "Joinery & Finishing Detail",
+      "Built-in Cabinet",
+      "Loose Furniture"
     ]
   }
 ]

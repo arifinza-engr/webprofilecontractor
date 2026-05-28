@@ -27,6 +27,14 @@ const SELECTION = [
   { id: "D43", out: "doc-10", title: "Hunian Dua Lantai Modern",        category: "konstruksi" },
   { id: "D11", out: "doc-11", title: "Ruang Keluarga Residensial",      category: "interior"   },
   { id: "D15", out: "doc-12", title: "Detail Fasad Modern",             category: "konstruksi" },
+  { id: "B16", out: "doc-13", title: "Storefront Kafe Komersial",       category: "konstruksi" },
+  { id: "B18", out: "doc-14", title: "Interior Kafe Modern",            category: "interior"   },
+  { id: "B26", out: "doc-15", title: "Partisi Dekoratif Custom",        category: "interior"   },
+  { id: "B28", out: "doc-16", title: "Signage 3D Kustom",               category: "interior"   },
+  { id: "B30", out: "doc-17", title: "Partisi Wood Slat",               category: "interior"   },
+  { id: "D05", out: "doc-18", title: "Eksterior Gedung Komersial",      category: "konstruksi" },
+  { id: "D08", out: "doc-19", title: "Kanopi Baja Industrial",          category: "struktur"   },
+  { id: "D29", out: "doc-20", title: "Skylight Struktur Baja",          category: "struktur"   },
 ];
 
 if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });

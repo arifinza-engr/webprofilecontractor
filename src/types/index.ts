@@ -19,7 +19,37 @@ export interface PortfolioItem {
   area?:    string;
 }
 
-export type PortfolioCategory = "konstruksi" | "interior" | "drafter" | "all";
+export type PortfolioCategory =
+  | "construction"
+  | "architecture"
+  | "interior"
+  | "furniture"
+  | "all";
+
+export interface Value {
+  id:          string;
+  title:       string;
+  subtitle:    string;
+  icon:        string;
+  description: string;
+}
+
+export interface LegalItem {
+  id:       string;
+  title:    string;
+  subtitle: string;
+  icon:     string;
+}
+
+export interface ValuesData {
+  values:     Value[];
+  advantages: string[];
+}
+
+export interface VisiMisi {
+  visi: string;
+  misi: string[];
+}
 
 export interface Testimonial {
   id:       string;
