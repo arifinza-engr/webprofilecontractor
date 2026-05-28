@@ -23,8 +23,8 @@ export default function AboutSection() {
           >
             <div className="aspect-[4/5] relative rounded-2xl overflow-hidden shadow-xl shadow-ink/15 group">
               <Image
-                src="/dokumentasi/doc-04.jpg"
-                alt="Proyek CV Gabel Gemilang Indonesia"
+                src="https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f"
+                alt="Tim CV Gabel Gemilang Indonesia di lapangan"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
